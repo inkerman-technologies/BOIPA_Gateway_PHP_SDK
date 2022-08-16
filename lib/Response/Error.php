@@ -8,7 +8,7 @@ class ResponseError extends Response {
 
     public function __construct($response, $request, $info = array()) {
         parent::__construct($response, $info);
-        $this->_errors = new ResponseErrorErrors($this->data["errors"]);
+        $this->_errors = new ResponseErrorErrors($this->_data["errors"]);
         $this->_request = $request;
     }
 
